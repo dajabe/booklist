@@ -1,0 +1,19 @@
+{
+  "name": "booklist",
+  "version": "1.0.0",
+  "description": "Personal reading list tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dajabe/booklist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dajabe/booklist/issues"
+  },
+  "homepage": "https://github.com/dajabe/booklist#readme"
+}
