@@ -1,2 +1,2 @@
 # booklist
-A reading list manager
+A personal reading list manager
