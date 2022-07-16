@@ -1,5 +1,4 @@
 # Logs
-my-app
 logs
 *.log
 npm-debug.log*
@@ -103,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Webpack bundle
+server/public/bundle.js
+server/public/bundle.js.map
+
+# Generated css
+server/public/styles.css
+server/public/styles.css.map
