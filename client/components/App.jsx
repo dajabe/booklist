@@ -1,15 +1,23 @@
-import React from 'react'
-import { Heading } from '@chakra-ui/react'
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+
+import Header from './Header'
+import Content from './Content'
+import Navigation from './Navigation'
+import { getBookList } from '../redux/bookSlice'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getBookList())
+  }, [])
+
   return (
     <>
-      <Heading as="h1" size="xl">
-        Booklist!!!
-      </Heading>
-      <Heading as="h2" size="md">
-        A place for your own reading list
-      </Heading>
+      <Header />
+      <Content />
+      <Navigation />
     </>
   )
 }
