@@ -8,3 +8,4 @@ Currently consists of a table of books and a table of authors with a joining tab
 ## TODO
 This is a list of things to add after MVP is achieved.
 - Add date tracking for releases, when it was read, and when it was recommended
+- Add notes feature
