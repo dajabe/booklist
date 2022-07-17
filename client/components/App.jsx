@@ -1,15 +1,14 @@
 import React from 'react'
-import { Heading } from '@chakra-ui/react'
+import Header from './Header'
+import Content from './Content'
+import Navigation from './Navigation'
 
 function App() {
   return (
     <>
-      <Heading as="h1" size="xl">
-        Booklist!!!
-      </Heading>
-      <Heading as="h2" size="md">
-        A place for your own reading list
-      </Heading>
+      <Header />
+      <Content />
+      <Navigation />
     </>
   )
 }
