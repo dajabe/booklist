@@ -7,6 +7,8 @@ const {
   getBooksByAuthor,
 } = require('../db/queries/books')
 
+//~ GET /api/v1/books/
+
 router.get('/', async (req, res) => {
   const books = req.query.author
     ? await getBooksByAuthor(Number(req.query.author))
@@ -15,8 +17,8 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-  const books = await getBookById(req.params.id)
-  res.json(books)
+  const book = await getBookById(req.params.id)
+  res.json(book)
 })
 
 router.get('/')
