@@ -6,6 +6,7 @@ const {
   getAuthorById,
   addAuthor,
   updateAuthor,
+  delAuthor,
 } = require('../db/queries/authors')
 
 //~ GET /api/v1/authors/
@@ -30,6 +31,12 @@ router.patch('/', async (req, res) => {
   const data = { ...req.body }
   const newAuthor = await updateAuthor(data)
   res.json(newAuthor)
+})
+
+router.delete('/', async (req, res) => {
+  const deletedAuthor = await delAuthor(Number(req.body.id))
+  // const deletedAuthor = req.body.id
+  res.json(deletedAuthor)
 })
 
 module.exports = router

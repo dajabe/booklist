@@ -17,9 +17,14 @@ function updateAuthor(author, db = conn) {
   return db('authors').where({ id: author.id }).update(author)
 }
 
+function delAuthor(id, db = conn) {
+  return db('authors').where({ id }).del()
+}
+
 module.exports = {
   getAuthors,
   getAuthorById,
   addAuthor,
   updateAuthor,
+  delAuthor,
 }

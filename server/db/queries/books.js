@@ -38,10 +38,15 @@ function updateBook(book, db = conn) {
   return db('books').where({ id: book.id }).update(book)
 }
 
+function delBook(id, db = conn) {
+  return db('books').where({ id }).del()
+}
+
 module.exports = {
   getBooks,
   getBookById,
   getBooksByAuthor,
   addBook,
   updateBook,
+  delBook,
 }
