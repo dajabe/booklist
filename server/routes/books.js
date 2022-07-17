@@ -5,6 +5,8 @@ const {
   getBooks,
   getBookById,
   getBooksByAuthor,
+  addBook,
+  updateBook,
 } = require('../db/queries/books')
 
 //~ GET /api/v1/books/
@@ -21,6 +23,16 @@ router.get('/:id', async (req, res) => {
   res.json(book)
 })
 
-router.get('/')
+router.post('/', async (req, res) => {
+  const data = { ...req.body }
+  const newBook = await addBook(data)
+  res.json(newBook)
+})
+
+router.patch('/', async (req, res) => {
+  const data = { ...req.body }
+  const newBook = await updateBook(data)
+  res.json(newBook)
+})
 
 module.exports = router

@@ -30,8 +30,18 @@ function getBooksByAuthor(author_id, db = conn) {
     )
 }
 
+function addBook(newBook, db = conn) {
+  return db('books').insert(newBook)
+}
+
+function updateBook(book, db = conn) {
+  return db('books').where({ id: book.id }).update(book)
+}
+
 module.exports = {
   getBooks,
   getBookById,
   getBooksByAuthor,
+  addBook,
+  updateBook,
 }
