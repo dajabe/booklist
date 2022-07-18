@@ -79,13 +79,9 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.4",
-    "@chakra-ui/react": "^2.2.3",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
     "@reduxjs/toolkit": "^1.8.3",
+    "dayjs": "^1.11.3",
     "express": "^4.17.2",
-    "framer-motion": "^6.4.3",
     "knex": "^2.1.0",
     "pg": "^8.7.1",
     "react-hook-form": "^7.33.1",

@@ -7,3 +7,24 @@ export function getBooks() {
     return res.body
   })
 }
+
+export function addBook(book) {
+  return request
+    .post(rootUrl)
+    .send(book)
+    .then((res) => res.body)
+}
+
+export function updateBook(book) {
+  return request
+    .patch(rootUrl)
+    .send(book)
+    .then((res) => res.body)
+}
+
+export function delBook(id) {
+  return request
+    .del(rootUrl)
+    .send({ id })
+    .then((res) => res.body)
+}
