@@ -12,8 +12,14 @@ export default function Header() {
   return (
     <>
       <header>
-        <h1 onClick={clickHandler} className="title">
-          Booklist
+        <h1 className="title">
+          <button
+            className="title"
+            onClick={clickHandler}
+            onKeyPress={clickHandler}
+          >
+            Booklist
+          </button>
         </h1>
       </header>
     </>
