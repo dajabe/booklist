@@ -37,8 +37,8 @@ router.patch('/', async (req, res) => {
 })
 
 router.delete('/', async (req, res) => {
-  const deletedAuthor = await delBook(Number(req.body.id))
-  res.json(deletedAuthor)
+  const deletedBook = await delBook(Number(req.body.id))
+  res.json(deletedBook)
 })
 
 module.exports = router

@@ -21,3 +21,10 @@ export function updateBook(book) {
     .send(book)
     .then((res) => res.body)
 }
+
+export function delBook(id) {
+  return request
+    .del(rootUrl)
+    .send({ id })
+    .then((res) => res.body)
+}
