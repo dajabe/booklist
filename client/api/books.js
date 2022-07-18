@@ -14,3 +14,10 @@ export function addBook(book) {
     .send(book)
     .then((res) => res.body)
 }
+
+export function updateBook(book) {
+  return request
+    .patch(rootUrl)
+    .send(book)
+    .then((res) => res.body)
+}
